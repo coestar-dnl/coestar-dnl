@@ -1,0 +1,103 @@
+@@ -1,5 +1,17 @@
+# Список изменений
+
+## 3.0.0
+
+### Нарушение изменений
+* [bem-core](https://en.bem.info/libs/bem-core /) библиотека была обновлена до [3.0.1] (https://github.com/bem/bem-core/releases/tag/v3.0.1 ). С этим обновлением [FastClick] (https://github.com/ftlabs/fastclick ) был удален, и для устройств iOS была введена новая реализация событий указателя. Также свойство touch-action: manipulation было добавлено в элементы управления ([# 1787](https://github.com/bem/bem-components/issues/1787 )).
+* Прекращена поддержка старых версий `bem-xjst` и `bh` ([# 1803](https://github.com/bem/bem-components/issues/1803 )). [bem-xjst](https://github.com/bem/bem-xjst ) следует использовать 6.3.0+. Теперь нет необходимости добавлять зависимости от блока `i-bem` для базовых шаблонов.
+* Расширения файлов шаблонов `BEMHTML` были переименованы из `.bemhtml` в `.bemhtml.js ` ([#1464](https://github.com/bem/bem-components/issues/1464 ). Пожалуйста, проверьте, что новое расширение поддерживается в конфигурации сборки.
+*  Метод `onSwitcherClick` блока `dropdown` был перемещен в prototype ([# 1502](https://github.com/bem/bem-components/issues/1502 )).
+* Конфигурации `bem-tools` были удалены ([# 1816](https://github.com/bem/bem-components/issues/1816 )).
+
+### Исправления ошибок
+* Исправлен неправильный стиль для `выпадающего списка` в `control-group` ([# 1741](https://github.com/bem/bem-components/issues/1741 )).
+
+## 2.5.1
+
+### Заметные изменения
+* [bem-core](https://en.bem.info/libs/bem-core /) библиотека была обновлена до [2.9.1] (https://github.com/bem/bem-core/releases/tag/v2.9.1 ) ([#1789](https://github.com/bem/bem-components/issues/1789 )). С этим обновлением была исправлена проблема в `странице`. `<meta name=viewport>` имел неправильное масштабируемое пользователем значение на уровне `touch`.
+### Исправления ошибок
+* Исправлена ошибка в `меню`, которая приводила к отсутствию "tabindex" после отключенного состояния ([# 1791](https://github.com/bem/bem-components/pull/1791 )).
+* Исправлена ошибка в "control-group", которая приводила к дополнительной границе на двух или более "button_checked`.
+## 2.5.0
+### Заметные изменения
+* [bem-core](https://en.bem.info/libs/bem-core /) библиотека была обновлена до версии 2.9.0 ([#1755](https://github.com/bem/bem-components/issues/1755 )).
+### Исправления ошибок
+* Исправлена ошибка в `select`, которая приводила к кэшированию скрытого ввода при обновлении страницы ([# 1752](https://github.com/bem/bem-components/issues/1752 )).
+* Исправлена ошибка в "button", которая приводила к генерации события `click` после `pointercancel` [# 1764] (https://github.com/bem/bem-components/pull/1764 ).
+* Исправлена ошибка в `checkbox` и `radio`` которая приводила к неправильной сериализации форм с помощью `jQuery' [# 1768] (https://github.com/bem/bem-components/issues/1768 ).
+* Исправлена ошибка в стиле "button" с модификатором `focused-hard` ([# 1721](https://github.com/bem/bem-components/pull/1721 )).
+* Исправлена правая граница `кнопки` внутри `control-group` ([# 1723](https://github.com/bem/bem-components/pull/1723 )).
+* Исправлены границы для автозаполненных входов в браузерах на основе Blink ([#1710](https://github.com/bem/bem-components/issues/1710 )).
+* Исправлена разметка a11y в `select` ([# 1734](https://github.com/bem/bem-components/issues/1734 )).
+* Добавлено недостаточно зависимостей в `select` ([# 1667](https://github.com/bem/bem-components/pull/1667 ))&
+### Другие изменения
+* Dist: добавлены клиентские JS-пакеты без autoinit [#1781](https://github.com/bem/bem-components/pull/1781 ).
+* BEMHTML: реализована поддержка новых версий `bem-xjst` ([# 1745](https://github.com/bem/bem-components/issues/1745 )).
+* Обновлена документация.
+## 2.4.0
+### Заметные изменения
+* зависимость `bem-core` была обновлена до [2.8.0] (https://en.bem.info/libs/bem-core/v2.8.0/changelog/#280 ).
+* Доступность (a11y) была улучшена во всех блоках ([# 1206](https://github.com/bem/bem-components/issues/1206 )).
+* Сборка `dist` теперь использует `bem-xjst@next`, что дает возможность добавлять шаблоны во время выполнения.
+### Другие изменения
+* `dropdown` больше не создает дополнительную оболочку вокруг `switcher` и `popup` ([# 1392](https://github.com/bem/bem-components/issues/1392 )).
+* Неправильно используемый элемент "<i>" заменен на нейтральный ` во всех блоках ([# 1668](https://github.com/bem/bem-components/issues/1668 )).
+* Многострочные комментарии в файлах stylus, которые разбивают исходные карты, заменены на singleline ([#1702](https://github.com/bem/bem-components/issues/1702 )).
+## 2.3.0
+### Заметные изменения
+* зависимость `bem-core` была обновлена до [2.7.0] (https://en.bem.info/libs/bem-core/v2.7.0/changelog/#270 ).
+* Добавлена поддержка BH 4.x ([#1587](https://github.com/bem/bem-components/issues/1587 )).
+* Добавлена поддержка BEM-XJST 2.x ([#1495](https://github.com/bem/bem-components/pull/1495 )).
+* Тематические стили модификатора `_width_available` блоков `input`, `textarea` и `select` были перенесены обратно с уровня "common" на уровень `design` ([# 1548] (https://github.com/bem/bem-components/issues/1548 )).
+### Исправления ошибок
+* Исправлена ошибка в `флажке`. Блок не работал в MSIE 11/Edge ([#1590](https://github.com/bem/bem-components/issues/1590 )).
+* Исправлена ошибка в разделе `Прикрепить`. Блок не работал в MSIE 11/Edge ([#1596](https://github.com/bem/bem-components/issues/1596 )).
+* Добавлена возможность использования HTML-тегов, отличных от `button` ([#1566](https://github.com/bem/bem-components/issues/1566 )).
+* Исправлена проблема в `textarea`. Блок не разрешил свои собственные зависимости должным образом ([# 1565](https://github.com/bem/bem-components/issues/1565 )).
+### Другие изменения
+* Обновлена английская версия описания библиотеки ([#1552](https://github.com/bem/bem-components/pull/1552 )).
+* В русскоязычную документацию добавлен новый раздел “Понимание принципов работы библиотеки” ([#1613](https://github.com/bem/bem-components/pull/1613 )).
+* Информация о `dist` была добавлена в русскую документацию ([#1584](https://github.com/bem/bem-components/pull/1584 )).
+* Изображения в файлах CSS теперь заморожены в версии разработки `dist` ([# 1568](https://github.com/bem/bem-components/issues/1568 )).
+* Инициализация `select` была увеличена ([# 1595](https://github.com/bem/bem-components/pull/1595 )).
+* Улучшено представление `input_theme_islands` без модификатора `_has-clear` ([#1610](https://github.com/bem/bem-components/issues/1610 )).
+* Исправлено выбранное текстовое представление `input_theme_islands` ([# 1608](https://github.com/bem/bem-components/issues/1608 )).
+## 2.2.1
+### Исправления ошибок
+* Исправлена ошибка в `флажке`, которая приводила к невозможности переключения по щелчку мыши в большинстве браузеров ([# 1538](https://github.com/bem/bem-components/issues/1538 )).
+## 2.2.0
+### Исправления ошибок
+* Исправлена проблема в `select`, которая не позволяла открыть его с помощью кнопки `space` ([# 1486] (https://github.com/bem/bem-components/issues/1486 )).
+* Проблема в `флажке` на сенсорных устройствах была исправлена ([# 1472](https://github.com/bem/bem-components/issues/1472 )).
+### Другие изменения
+* Теперь есть возможность предотвратить собственное поведение в блоке `link` ([# 1485](https://github.com/bem/bem-components/issues/1485 )).
+* Добавлена дополнительная проверка наличия группы в шаблонах `меню` ([#1513](https://github.com/bem/bem-components/issues/1513 )).
+* Пакеты BH в `dist` теперь имитируют BEMHTML ([# 1530](https://github.com/bem/bem-components/issues/1530 )).
+* Добавлены небольшие исправления в документации.
+## 2.1.1
+### Исправления ошибок
+* Регрессия поддержки клавиатуры в `select` была исправлена ([# 1456](https://github.com/bem/bem-components/issues/1456 )).
+### Другие изменения
+* Теперь поле `val` по умолчанию равно нулю в `progressbar` ([# 1468](https://github.com/bem/bem-components/issues/1468 )).
+* Описание `button_view_plain` было добавлено в документацию ([# 1454](https://github.com/bem/bem-components/issues/1454 )).
+## 2.1.0
+### Заметные изменения
+* Реализована дополнительная поддержка Internet Explorer 8 в виде изящной деградации ([#1205](https://github.com/bem/bem-components/issues/1205 )). Для получения дополнительной информации обратитесь к [примечания в README] (/README.md #support-ie8).
+* зависимость "bem-core" была обновлена до [2.6.0] (https://github.com/bem/bem-core/blob/v2/CHANGELOG.md#260 ).
+### Исправления ошибок
+* Исправлена проблема с изменением размера в блоке `textarea` ([# 1330](https://github.com/bem/bem-components/issues/1330 )).
+* Исправлена проблема с переходом "select", которая приводила к вспышке полос прокрутки ([# 1323](https://github.com/bem/bem-components/issues/1323 )).
+* Удалена подсветка элементов управления на сенсорных устройствах ([#1390](https://github.com/bem/bem-components/issues/1390 )).
+* Исправлено появление `button_view_plain` в отключенном состоянии ([# 1378](https://github.com/bem/bem-components/issues/1378 )).
+* Исправлена проблема с поведением блока ввода в Chrome ([# 1382](https://github.com/bem/bem-components/issues/1382 )).
+* Исправлена проблема с видимым содержимым скрытого `модала` ([# 1372](https://github.com/bem/bem-components/issues/1372 )).
+* Исправлена проблема с дополнительным ограничением обработчика keydown в блоке menu ([# 1381](https://github.com/bem/bem-components/issues/1381 )).
+* Распространение события в блоке `select" при нажатии кнопки "escape" теперь остановлено ([# 1367](https://github.com/bem/bem-components/issues/1367 )).
+* `link` inside disabled `menu-item_type_link` теперь также отключен ([#1353](https://github.com/bem/bem-components/issues/1367 )).
+### Другие изменения
+* Добавлена возможность использовать модификатор `_width_available` в `input`, `select` и `textarea` без темы ([# 1404](https://github.com/bem/bem-components/issues/1404 )).
+* Улучшена конфигурация для сборки дистрибутива библиотеки ([#1411](https://github.com/bem/bem-components/issues/1411 )).
+* блок `меню` выдаст описательную ошибку в случае неправильного содержимого ([# 1320](https://github.com/bem/bem-components/issues/1320 )).
+* Документация была обновлена.
